@@ -1,0 +1,12 @@
+{%extends 'employees/base.html'%}
+
+{%block content%}
+<h1>{{title}}</h1>
+<form method="post">
+    {%csrf_token%}
+    Подтвердите удаление записа
+    <input type = 'submit' value="Да">
+    <a href="/">Нет</a>
+
+</form>
+{% endblock%}

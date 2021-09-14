@@ -1,0 +1,12 @@
+{%extends 'employees/base.html'%}
+
+{%block content%}
+<h1>{{title}}</h1>
+<form method="post">
+    {%csrf_token%}
+    {{form.as_p}}
+    <button type="submit">Редактировать</button>
+    <a href='/delete_e/{{id}}'> Удалить</a>
+
+</form>
+{% endblock%}
